@@ -1,1 +1,77 @@
+¡Claro! El modelo matemático de Kerr describe la geometría del espacio-tiempo alrededor de un agujero negro en rotación (sin carga eléctrica). Es una solución exacta de las ecuaciones de campo de Einstein de la relatividad general y fue descubierta por el físico neozelandés Roy Kerr en 1963.
 
+A diferencia de la solución de Schwarzschild, que describe un agujero negro estático y esféricamente simétrico, la métrica de Kerr es axisimétrica (simétrica alrededor de un eje) y representa un agujero negro que gira.
+
+---
+
+1. La Métrica de Kerr (en coordenadas de Boyer-Lindquist)
+
+La forma más común de escribir la métrica es utilizando las coordenadas de Boyer-Lindquist \((t, r, \theta, \phi)\). Estas coordenadas son muy convenientes porque minimizan el número de componentes no nulos del tensor métrico.
+
+La línea infinitesimal ds^2 (que da el intervalo espacio-temporal) se escribe como:
+
+ds^2 = -\left(1 - \frac{2GMr}{\rho^2 c^2}\right)c^2 dt^2 + \frac{\rho^2}{\Delta} dr^2 + \rho^2 d\theta^2 + \left(r^2 + a^2 + \frac{2GMra^2 \sin^2\theta}{\rho^2 c^4}\right) \sin^2\theta  d\phi^2 - \frac{4GMra \sin^2\theta}{\rho^2 c^2} dt  d\phi
+
+Donde:
+
+· G es la constante gravitacional.
+· M es la masa del agujero negro.
+· c es la velocidad de la luz.
+· a = \frac{J}{Mc} es el parámetro de spin (giro), que va de 0 (Schwarzschild) a M (Kerr extremo). J es el momento angular.
+· Se definen dos funciones auxiliares:
+  · \rho^2 = r^2 + a^2 \cos^2\theta
+  · \Delta = r^2 - \frac{2GMr}{c^2} + a^2
+
+---
+
+2. Características Clave del Modelo
+
+A. Horizontes de Eventos
+
+La métrica tiene singularidades en los puntos donde \Delta = 0 y grr \to \infty. Esto define dos horizontes de eventos:
+
+· Horizonte de Eventos Externo: r_+ = \frac{GM}{c^2} + \sqrt{\left(\frac{GM}{c^2}\right)^2 - a^2}
+· Horizonte de Eventos Interno (o de Cauchy): r_- = \frac{GM}{c^2} - \sqrt{\left(\frac{GM}{c^2}\right)^2 - a^2}
+
+Para que existan horizontes reales, se debe cumplir a \leq \frac{GM}{c^2}. Si a > \frac{GM}{c^2}, la singularidad se vuelve "desnuda", lo que viola la conjetura de censura cósmica.
+
+B. Ergósfera
+
+Es una región elipsoidal fuera del horizonte de eventos externo donde el arrastre del espacio-tiempo es tan fuerte que es imposible para cualquier objeto (incluso la luz) permanecer en reposo. Todo debe rotar con el agujero negro. El límite exterior de la ergósfera (la superficie límite estática) está dado por:
+
+r_{erg} = \frac{GM}{c^2} + \sqrt{\left(\frac{GM}{c^2}\right)^2 - a^2 \cos^2\theta}
+
+En la ergósfera, es posible extraer energía y momento angular del agujero negro mediante el proceso de Penrose.
+
+C. Singularidad Anular (Ring Singularity)
+
+A diferencia de la singularidad puntual en el centro de un agujero negro de Schwarzschild, la singularidad de Kerr es anular y se encuentra en el plano ecuatorial (\theta = \pi/2\)) donde \(\rho^2 = 0. Esto implica:
+
+r^2 + a^2 \cos^2\theta = 0 \implies r = 0 \quad \text{y} \quad \theta = \pi/2
+
+Esta es una singularidad de "anillo" con radio a. Es una característica puramente matemática donde la curvatura se vuelve infinita.
+
+---
+
+3. Interpretación Física y Aplicaciones
+
+El modelo de Kerr es fundamental en astrofísica por varias razones:
+
+1. Realismo Físico: Casi todos los agujeros negros astrofísicos deben tener momento angular porque se forman a partir del colapso de estrellas que giran, o acrecen materia con momento angular. Por lo tanto, Kerr es la descripción más realista de un agujero negro.
+2. Discos de Acreción: La rotación del agujero negro afecta dramáticamente la estructura del disco de acreción a su alrededor, influyendo en la órbita de la materia, la liberación de energía y la emisión de radiación.
+3. Agujeros Negros Supermasivos: El modelo de Kerr es esencial para modelar el comportamiento de los agujeros negros supermasivos en los centros de las galaxias, incluyendo los cuásares y las emisiones de sus jets relativistas.
+4. Ondas Gravitacionales: Las señales de ondas gravitacionales de fusiones de agujeros negros (como las detectadas por LIGO y Virgo) se comparan con predicciones numéricas basadas en la métrica de Kerr para determinar las propiedades (masa y spin) de los agujeros negros resultantes.
+
+---
+
+4. Resumen de las Diferencias con Schwarzschild
+
+Característica Agujero Negro de Schwarzschild Agujero Negro de Kerr
+Rotación No gira (\(a = 0\))  Gira (\(0 < a \leq M\)) 
+Simetría Esférica Axisimétrica (simetría axial)
+Horizontes Uno (\(r = 2GM/c^2\))  Dos (r_+ y \(r_-\)) 
+Ergósfera No tiene Sí tiene
+Singularidad Puntual Anular
+Complejidad Más simple Más compleja (término cruzado \(dt d\phi\)) 
+
+En resumen, la métrica de Kerr es el modelo matemático que describe la geometría del espacio-tiempo curvado por un agujero negro masivo y en rotación, y es la piedra angular para entender la física de los agujeros negros en nuestro universo.
