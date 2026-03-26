@@ -12,7 +12,7 @@ BCF		    STATUS, RP1
 BCF		    TRISB,  RB0
 BCF		    STATUS, RP0
 
-END	    BCF		    PORTB, RB0
+FIN	    BCF		    PORTB, RB0
 	    CALL	    RETARDO
 	    BSF		    PORTB, RB0
 	    CALL	    RETARDO
@@ -29,4 +29,4 @@ RETARDO2    MOVLW	    0XFF
 X2	    DECFSZ	    T2
 	    GOTO	    X2
 	    RETURN
-	    END
+END
