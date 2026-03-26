@@ -11,8 +11,8 @@ BSF		    STATUS, RP0
 BCF		    STATUS, RP1
 BCF		    TRISB,  RB0
 BCF		    STATUS, RP0
-END
-	    BCF		    PORTB, RB0
+
+END	    BCF		    PORTB, RB0
 	    CALL	    RETARDO
 	    BSF		    PORTB, RB0
 	    CALL	    RETARDO
