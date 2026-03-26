@@ -4,7 +4,7 @@
 	    T1
 	    T2
 	    __CONFIG _FOSC_HS & _WDTE_OFF & _PWRTE_ON & _BOREN_OFF & _LVP_OFF & CPD_OFF & WRT_OFF & _CP_OFF
-	    ORG OX0000
+	    ORG 0X0000
 	    BSF		    STATUS, RP0
 	    BCF		    STATUS, RP1
 	    BCF		    TRISB,  RB0
