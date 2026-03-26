@@ -6,27 +6,29 @@ T2
 CEND
 	    
 __CONFIG _FOSC_HS & _WDTE_OFF & _PWRTE_ON & _BOREN_OFF & _LVP_OFF & _CPD_OFF & _WRT_OFF & _CP_OFF
- ORG 0X0000
-BSF		    STATUS, RP0
-BCF		    STATUS, RP1
-BCF		    TRISB,  RB0
-BCF		    STATUS, RP0
+ORG 0X0000
+		BSF		    STATUS, RP0
+		BCF		    STATUS, RP1
+		BCF		    TRISB,  RB0
+		BCF		    STATUS, RP0
+		CLRF		PORTB
 
-FIN	    BCF		    PORTB, RB0
+LOOP    BCF		    PORTB, RB0
 	    CALL	    RETARDO
 	    BSF		    PORTB, RB0
 	    CALL	    RETARDO
-	    GOTO	    FIN
+	    GOTO	    LOOP
 	    
 RETARDO	    MOVLW	    0xFF
 	    MOVWF	    T1
-X1	    CALL	    RETARDO2
+
+LOOP1   CALL	    RETARDO2
 	    DECFSZ	    T1
-	    GOTO	    X1
+	    GOTO	    LOOP1
 	    RETURN
 RETARDO2    MOVLW	    0xFF
 	    MOVWF	    T2
-X2	    DECFSZ	    T2
-	    GOTO	    X2
+LOOP2	    DECFSZ	    T2
+	    GOTO	    LOOP2
 	    RETURN
 END
