@@ -22,8 +22,8 @@ LOOP    BCF		    PORTB, RB0
 RETARDO	    MOVLW	    0xFF
 	    MOVWF	    T1
 
-LOOP1   CALL	    RETARDO2
-	    DECFSZ	    T1
+LOOP1   DECFSZ	    T1
+	    CALL		RETARDO2
 	    GOTO	    LOOP1
 	    RETURN
 RETARDO2    MOVLW	    0xFF
